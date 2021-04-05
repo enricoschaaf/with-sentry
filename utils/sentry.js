@@ -15,10 +15,7 @@ export const init = () => {
         new RewriteFrames({
           iteratee: (frame) => {
             frame.filename = frame.filename
-              .replace(
-                process.env.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR,
-                "app:///",
-              )
+              .replace(process.env.NEXT_PUBLIC_SENTRY_SERVER_ROOT_DIR, "~/")
               .replace(".next", "_next")
 
             return frame
