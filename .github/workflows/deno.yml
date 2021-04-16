@@ -8,8 +8,10 @@
 
 name: Deno
 
-on: 
-  workflow_dispatch
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '30 9 * * *'
 
 jobs:
   test:
